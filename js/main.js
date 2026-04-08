@@ -1,10 +1,16 @@
 (function () {
   var cfg = window.CRUMORA_CONFIG || {};
 
+  function defaultWaText() {
+    var who = cfg.whatsappContactName;
+    if (who) return "Hi " + who + "! I'd like to place an order with Crumora Patisserie.";
+    return "Hi Crumora! I'd like to place an order.";
+  }
+
   function waLink(text) {
     var cc = String(cfg.whatsappCountryCode || "91").replace(/\D/g, "");
     var num = String(cfg.whatsappNumber || "").replace(/\D/g, "");
-    var body = encodeURIComponent(text || "Hi Crumora! I'd like to place an order.");
+    var body = encodeURIComponent(text || defaultWaText());
     return "https://wa.me/" + cc + num + (body ? "?text=" + body : "");
   }
 

@@ -48,6 +48,8 @@
   }
 
   function buildWhatsAppMessage() {
+    var cfg = window.CRUMORA_CONFIG || {};
+    var toName = cfg.whatsappContactName || "Crumora Patisserie";
     var items = window.CrumoraCart.getItems();
     var name = (document.querySelector("#cust-name") || {}).value || "";
     var phone = (document.querySelector("#cust-phone") || {}).value || "";
@@ -57,7 +59,9 @@
     });
     var sub = window.CrumoraCart.subtotal();
     return (
-      "Hi Crumora Patisserie! I'd like to order:\n\n" +
+      "Hi " +
+      toName +
+      "! I'd like to order:\n\n" +
       lines.join("\n") +
       "\n\n*Total: " +
       rupee(sub) +
