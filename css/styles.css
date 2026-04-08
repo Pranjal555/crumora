@@ -1,20 +1,28 @@
-/* Crumora Patisserie — static frontend for GitHub Pages */
+/* Crumora Patisserie — organic luxury: chocolate brown, warm cream, muted gold */
 :root {
-  --olive: #354a21;
-  --olive-light: #4a6230;
-  --olive-dark: #243618;
-  --gold: #d4af37;
-  --gold-dim: #b8962e;
-  --cream: #f5f0e8;
-  --ink: #0f0f0f;
-  --surface: #161816;
-  --surface-2: #1e221c;
-  --muted: #9aa395;
-  --white: #faf9f6;
-  --danger: #c44;
+  --chocolate: #3d2c24;
+  --chocolate-deep: #2a1f1a;
+  --chocolate-rich: #4a362c;
+  --cream: #f7efe6;
+  --cream-warm: #faf6f0;
+  --cream-card: #fffdf9;
+  --taupe: #5c4f47;
+  --gold: #c4a574;
+  --gold-dim: #a88b5e;
+  --white: #fffcf7;
+  --ink: #1a1411;
+  --olive: var(--chocolate);
+  --olive-light: #5c483e;
+  --olive-dark: var(--chocolate-deep);
+  --surface: #efe6dc;
+  --surface-2: #e5dbd0;
+  --muted: #6b5d54;
+  --muted-soft: #8a7b72;
+  --danger: #b54a4a;
   --radius: 12px;
   --radius-lg: 20px;
-  --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+  --shadow: 0 20px 50px rgba(42, 31, 26, 0.12);
+  --shadow-deep: 0 18px 48px rgba(0, 0, 0, 0.35);
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "Outfit", system-ui, sans-serif;
 }
@@ -34,8 +42,8 @@ body {
   font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--cream);
-  background: var(--ink);
+  color: var(--taupe);
+  background: var(--cream-warm);
   min-height: 100vh;
 }
 
@@ -46,7 +54,7 @@ img {
 }
 
 a {
-  color: var(--gold);
+  color: var(--chocolate-rich);
   text-decoration: none;
 }
 
@@ -58,8 +66,8 @@ a:hover {
   position: absolute;
   left: -9999px;
   top: 0;
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--chocolate);
+  color: var(--cream);
   padding: 0.5rem 1rem;
   z-index: 9999;
 }
@@ -78,8 +86,8 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: linear-gradient(180deg, rgba(15, 15, 15, 0.98), rgba(15, 15, 15, 0.92));
-  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  background: var(--chocolate);
+  border-bottom: 1px solid rgba(255, 252, 247, 0.08);
   backdrop-filter: blur(10px);
 }
 
@@ -115,7 +123,7 @@ a:hover {
   width: auto;
   display: block;
   border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .logo.logo--brand:hover {
@@ -129,7 +137,7 @@ a:hover {
 .nav-toggle {
   display: none;
   background: transparent;
-  border: 1px solid rgba(212, 175, 55, 0.4);
+  border: 1px solid rgba(247, 239, 230, 0.35);
   color: var(--cream);
   padding: 0.45rem 0.65rem;
   border-radius: 8px;
@@ -173,7 +181,7 @@ a:hover {
   font-size: 0.7rem;
   font-weight: 700;
   background: var(--gold);
-  color: var(--ink);
+  color: var(--chocolate-deep);
   border-radius: 999px;
   vertical-align: middle;
 }
@@ -193,8 +201,8 @@ a:hover {
     top: 100%;
     left: 0;
     right: 0;
-    background: var(--surface);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+    background: var(--chocolate-deep);
+    border-bottom: 1px solid rgba(255, 252, 247, 0.08);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.35s ease;
@@ -212,7 +220,7 @@ a:hover {
   }
 
   .nav-list li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 252, 247, 0.06);
   }
 
   .nav-list a {
@@ -234,7 +242,7 @@ a:hover {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: var(--olive-dark) center / cover no-repeat;
+  background: var(--chocolate-deep) center / cover no-repeat;
   z-index: 0;
 }
 
@@ -244,9 +252,9 @@ a:hover {
   inset: 0;
   background: linear-gradient(
     105deg,
-    rgba(15, 15, 15, 0.92) 0%,
-    rgba(15, 15, 15, 0.55) 45%,
-    rgba(53, 74, 33, 0.35) 100%
+    rgba(42, 31, 26, 0.9) 0%,
+    rgba(42, 31, 26, 0.5) 45%,
+    rgba(61, 44, 36, 0.35) 100%
   );
 }
 
@@ -275,7 +283,7 @@ a:hover {
 
 .hero-lead {
   font-size: 1.05rem;
-  color: var(--muted);
+  color: rgba(247, 239, 230, 0.82);
   max-width: 36ch;
   margin-bottom: 1.75rem;
 }
@@ -309,24 +317,24 @@ a:hover {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--gold), var(--gold-dim));
-  color: var(--ink);
-  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.25);
+  background: linear-gradient(135deg, var(--chocolate-rich), var(--chocolate));
+  color: var(--cream);
+  box-shadow: 0 8px 24px rgba(42, 31, 26, 0.28);
 }
 
 .btn-primary:hover {
-  box-shadow: 0 10px 28px rgba(212, 175, 55, 0.35);
+  box-shadow: 0 10px 28px rgba(42, 31, 26, 0.36);
 }
 
 .btn-ghost {
   background: transparent;
-  color: var(--cream);
-  border: 1px solid rgba(212, 175, 55, 0.45);
+  color: var(--chocolate);
+  border: 1px solid rgba(61, 44, 36, 0.35);
 }
 
 .btn-ghost:hover {
-  border-color: var(--gold);
-  color: var(--gold);
+  border-color: var(--gold-dim);
+  color: var(--chocolate-rich);
 }
 
 .btn-block {
@@ -360,7 +368,7 @@ a:hover {
   font-family: var(--font-serif);
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   margin: 0 0 0.5rem;
-  color: var(--white);
+  color: var(--chocolate);
 }
 
 .section-intro {
@@ -377,21 +385,23 @@ a:hover {
 }
 
 .card {
-  background: var(--surface-2);
+  background: var(--cream-card);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 1px solid rgba(212, 175, 55, 0.1);
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  border: 1px solid rgba(61, 44, 36, 0.1);
+  box-shadow: var(--shadow);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-  border-color: rgba(212, 175, 55, 0.28);
+  border-color: rgba(196, 165, 116, 0.45);
   transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(42, 31, 26, 0.12);
 }
 
 .card-img {
   aspect-ratio: 4 / 3;
-  background: var(--olive-dark);
+  background: var(--surface-2);
   object-fit: cover;
   width: 100%;
 }
@@ -404,13 +414,13 @@ a:hover {
   font-family: var(--font-serif);
   font-size: 1.25rem;
   margin: 0 0 0.35rem;
-  color: var(--white);
+  color: var(--chocolate);
 }
 
 .card-body p {
   margin: 0 0 1rem;
   font-size: 0.92rem;
-  color: var(--muted);
+  color: var(--muted-soft);
 }
 
 .card-footer {
@@ -423,7 +433,7 @@ a:hover {
 
 .price {
   font-weight: 700;
-  color: var(--gold);
+  color: var(--chocolate-rich);
   font-size: 1.1rem;
 }
 
@@ -443,7 +453,7 @@ a:hover {
 
 .split-img {
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(61, 44, 36, 0.12);
   box-shadow: var(--shadow);
 }
 
@@ -466,7 +476,7 @@ a:hover {
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 0.35rem;
-  color: var(--cream);
+  color: var(--chocolate);
 }
 
 .form-group input,
@@ -476,10 +486,10 @@ a:hover {
   padding: 0.65rem 0.85rem;
   font-family: var(--font-sans);
   font-size: 1rem;
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  border: 1px solid rgba(61, 44, 36, 0.18);
   border-radius: 8px;
-  background: var(--surface-2);
-  color: var(--cream);
+  background: var(--white);
+  color: var(--ink);
 }
 
 .form-group input:focus,
@@ -522,17 +532,19 @@ a:hover {
 }
 
 .panel {
-  background: var(--surface-2);
+  background: var(--cream-card);
   border-radius: var(--radius-lg);
   padding: 1.5rem 1.75rem;
-  border: 1px solid rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(61, 44, 36, 0.1);
+  box-shadow: var(--shadow);
+  color: var(--taupe);
 }
 
 .panel h2 {
   font-family: var(--font-serif);
   font-size: 1.35rem;
   margin: 0 0 1.25rem;
-  color: var(--white);
+  color: var(--chocolate);
 }
 
 .order-line {
@@ -540,7 +552,7 @@ a:hover {
   justify-content: space-between;
   gap: 1rem;
   padding: 0.65rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(61, 44, 36, 0.08);
   font-size: 0.95rem;
 }
 
@@ -555,26 +567,26 @@ a:hover {
   font-size: 1.15rem;
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(212, 175, 55, 0.25);
-  color: var(--gold);
+  border-top: 1px solid rgba(196, 165, 116, 0.5);
+  color: var(--chocolate-rich);
 }
 
 .demo-banner {
-  background: rgba(212, 175, 55, 0.12);
-  border: 1px dashed rgba(212, 175, 55, 0.45);
+  background: rgba(196, 165, 116, 0.15);
+  border: 1px dashed rgba(61, 44, 36, 0.25);
   border-radius: var(--radius);
   padding: 0.85rem 1rem;
   font-size: 0.88rem;
-  color: var(--cream);
+  color: var(--chocolate);
   margin-bottom: 1.25rem;
 }
 
 /* Footer */
 .site-footer {
-  background: var(--olive-dark);
+  background: var(--chocolate-deep);
   padding: 3rem 0 2rem;
   margin-top: 2rem;
-  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  border-top: 1px solid rgba(255, 252, 247, 0.08);
 }
 
 .footer-grid {
@@ -595,12 +607,16 @@ a:hover {
 .footer-col p,
 .footer-col a {
   font-size: 0.9rem;
-  color: var(--muted);
+  color: rgba(247, 239, 230, 0.78);
 }
 
 .footer-col a {
   display: inline-block;
   margin-bottom: 0.35rem;
+}
+
+.footer-col a:hover {
+  color: var(--gold);
 }
 
 .social-row {
@@ -616,14 +632,14 @@ a:hover {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background: rgba(212, 175, 55, 0.12);
+  background: rgba(196, 165, 116, 0.2);
   color: var(--gold);
   text-decoration: none;
 }
 
 .social-row a:hover {
   background: var(--gold);
-  color: var(--ink);
+  color: var(--chocolate-deep);
 }
 
 .social-row a.social-icon {
@@ -653,9 +669,9 @@ a:hover {
 .footer-bottom {
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 252, 247, 0.1);
   font-size: 0.82rem;
-  color: var(--muted);
+  color: rgba(247, 239, 230, 0.55);
   text-align: center;
 }
 
@@ -698,11 +714,11 @@ a:hover {
   bottom: 5.5rem;
   left: 50%;
   transform: translateX(-50%) translateY(120%);
-  background: var(--surface-2);
-  color: var(--cream);
+  background: var(--cream-card);
+  color: var(--chocolate);
   padding: 0.85rem 1.25rem;
   border-radius: var(--radius);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  border: 1px solid rgba(61, 44, 36, 0.12);
   box-shadow: var(--shadow);
   z-index: 300;
   opacity: 0;
@@ -727,146 +743,82 @@ a:hover {
   font-weight: 600;
 }
 
-/* Homepage — gooey cookie photo background + brand logo (header) */
+/* Homepage — light layout (no full-bleed photo background) */
 html:has(.page-home) {
-  background-color: #120f0c;
+  background-color: var(--cream-warm);
 }
 
 .page-home {
-  color: #f5f0e8;
-  background-color: #1a1510;
-  background-image:
-    linear-gradient(
-      160deg,
-      rgba(12, 9, 7, 0.82) 0%,
-      rgba(18, 14, 11, 0.42) 42%,
-      rgba(10, 8, 6, 0.78) 100%
-    ),
-    url("../assets/background-cookie.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  color: var(--taupe);
+  background: var(--cream-warm);
 }
 
-.page-home .site-header {
-  background: rgba(18, 15, 12, 0.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom-color: rgba(212, 175, 55, 0.2);
+.page-home .hero-home--light {
+  align-items: flex-start;
+  min-height: min(56vh, 540px);
+  padding-top: 3rem;
+  padding-bottom: 3.5rem;
+  background: linear-gradient(168deg, var(--cream-card) 0%, var(--cream-warm) 42%, var(--surface) 100%);
+  border-bottom: 1px solid rgba(61, 44, 36, 0.08);
 }
 
-.page-home .nav-list a {
-  color: rgba(250, 248, 244, 0.92);
+.page-home .hero-home--light .hero-eyebrow {
+  color: var(--gold-dim);
 }
 
-.page-home .nav-list a:hover,
-.page-home .nav-list a[aria-current="page"] {
-  color: var(--gold);
+.page-home .hero-home--light h1 {
+  color: var(--chocolate);
+  text-shadow: none;
+  max-width: 18ch;
 }
 
-.page-home .nav-toggle {
-  border-color: rgba(212, 175, 55, 0.45);
-  color: var(--cream);
-}
-
-.page-home .nav {
-  background: rgba(22, 18, 15, 0.98);
-  border-bottom-color: rgba(212, 175, 55, 0.12);
-}
-
-.page-home .nav-list li {
-  border-bottom-color: rgba(255, 255, 255, 0.06);
-}
-
-.page-home .cart-badge {
-  background: var(--gold);
-  color: var(--ink);
-}
-
-.page-home .hero-home .hero-bg--cookie {
-  background: transparent;
-}
-
-.page-home .hero-home .hero-bg--cookie::after {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.08) 0%,
-    transparent 36%,
-    rgba(8, 6, 5, 0.88) 100%
-  );
-}
-
-.page-home .hero-eyebrow {
-  color: var(--gold);
-}
-
-.page-home .hero h1 {
-  color: var(--white);
-  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.5);
-}
-
-.page-home .hero-lead {
-  color: rgba(245, 238, 228, 0.9);
-  text-shadow: 0 1px 18px rgba(0, 0, 0, 0.4);
-}
-
-.page-home .btn-ghost {
-  color: #fefcf8;
-  border-color: rgba(255, 255, 255, 0.42);
-}
-
-.page-home .btn-ghost:hover {
-  border-color: var(--gold);
-  color: var(--gold);
+.page-home .hero-home--light .hero-lead {
+  color: var(--muted);
+  text-shadow: none;
 }
 
 .page-home .section-title {
-  color: #fefcf8;
+  color: var(--chocolate);
 }
 
 .page-home .section-intro {
-  color: rgba(220, 214, 204, 0.92);
+  color: var(--muted);
 }
 
 .page-home .section {
-  background: rgba(14, 12, 10, 0.72);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: transparent;
 }
 
 .page-home .section-alt {
-  background: rgba(10, 8, 7, 0.78);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: var(--surface);
 }
 
 .page-home .card {
-  background: rgba(255, 253, 249, 0.97);
-  border-color: rgba(59, 77, 43, 0.12);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.38);
+  background: var(--cream-card);
+  border-color: rgba(61, 44, 36, 0.1);
+  box-shadow: 0 14px 44px rgba(42, 31, 26, 0.14);
 }
 
 .page-home .card:hover {
-  border-color: rgba(212, 175, 55, 0.38);
+  border-color: rgba(196, 165, 116, 0.5);
 }
 
 .page-home .card-body h3 {
-  color: #1f1c17;
+  color: var(--chocolate);
 }
 
 .page-home .card-body p {
-  color: #5a554c;
+  color: var(--muted-soft);
 }
 
 .page-home .prose p,
 .page-home .prose ul {
-  color: rgba(220, 214, 204, 0.92);
+  color: var(--taupe);
 }
 
 .page-home .split-img {
-  border-color: rgba(212, 175, 55, 0.22);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  border-color: rgba(61, 44, 36, 0.12);
+  box-shadow: 0 20px 50px rgba(42, 31, 26, 0.18);
 }
 
 .page-home .site-footer {
