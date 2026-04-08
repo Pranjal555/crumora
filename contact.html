@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — Crumora Patisserie</title>
+    <meta name="description" content="Contact Crumora Patisserie — West Delhi cake studio." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo logo--brand" href="index.html"
+          ><img src="assets/logo-brand.png" alt="Crumora Patisserie" width="180" height="180"
+        /></a>
+        <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+        <nav id="site-nav" class="nav" data-nav aria-label="Main">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+            <li>
+              <a href="payment.html">Checkout <span class="cart-badge" data-cart-count></span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section" style="padding-top: 2.5rem">
+        <div class="container">
+          <h1 class="section-title">Contact</h1>
+          <p class="section-intro">
+            Tell us your date, serving size, and any theme references. We’ll reply on WhatsApp or Instagram.
+          </p>
+
+          <div class="payment-layout">
+            <div class="panel">
+              <h2>Send a message</h2>
+              <p class="form-hint" style="margin-bottom: 1rem">
+                This form opens your email app — no server required. For faster replies, use WhatsApp or Instagram.
+              </p>
+              <form
+                action="mailto:hello@example.com"
+                method="get"
+                enctype="text/plain"
+                id="contact-form"
+              >
+                <div class="form-group">
+                  <label for="c-name">Name</label>
+                  <input id="c-name" name="name" type="text" required autocomplete="name" />
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="c-email">Email</label>
+                    <input id="c-email" name="email" type="email" autocomplete="email" />
+                  </div>
+                  <div class="form-group">
+                    <label for="c-phone">Phone</label>
+                    <input id="c-phone" name="phone" type="tel" autocomplete="tel" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="c-msg">Message</label>
+                  <textarea id="c-msg" name="body" rows="5" required placeholder="Date needed, cake size, flavour ideas…"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Open in email</button>
+              </form>
+              <p class="form-hint" style="margin-top: 1rem">
+                Replace <code>hello@example.com</code> in this file with a real inbox, or rely on WhatsApp below.
+              </p>
+            </div>
+
+            <div class="panel">
+              <h2>Studio</h2>
+              <p style="color: var(--muted); font-size: 0.95rem; margin-top: 0">
+                <strong style="color: var(--cream)">Area:</strong> West Delhi, India<br />
+                <strong style="color: var(--cream)">Hours:</strong> By pre-order — message for same-week slots.
+              </p>
+              <h2 style="margin-top: 1.5rem">Direct lines</h2>
+              <a
+                class="btn btn-primary btn-block btn-with-icon"
+                href="#"
+                id="contact-wa"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="assets/icon-whatsapp.png" alt="" width="28" height="28" /> WhatsApp</a
+              >
+              <a
+                class="btn btn-ghost btn-block btn-with-icon"
+                style="margin-top: 0.65rem"
+                href="https://www.instagram.com/crumora_patisserie/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="assets/icon-instagram.png" alt="" width="28" height="28" /> Instagram @crumora_patisserie</a
+              >
+              <p class="form-hint" style="margin-top: 1rem">
+                WhatsApp number is set in <code>js/config.js</code> (<code>whatsappCountryCode</code> +
+                <code>whatsappNumber</code>).
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand">Crumora</div>
+          <p>West Delhi's premium cake &amp; pastry studio.</p>
+        </div>
+        <div class="footer-col">
+          <p><strong>Links</strong></p>
+          <a href="menu.html">Menu</a><br />
+          <a href="payment.html">Checkout</a><br />
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <p><strong>Social</strong></p>
+          <div class="social-row">
+            <a
+              class="social-icon"
+              href="https://www.instagram.com/crumora_patisserie/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              ><img src="assets/icon-instagram.png" alt="" width="96" height="96"
+            /></a>
+            <a class="social-icon" href="#" data-wa-float-footer aria-label="WhatsApp"
+              ><img src="assets/icon-whatsapp.png" alt="" width="96" height="96"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        © <span data-year></span> Crumora Patisserie.
+      </div>
+    </footer>
+
+    <a class="wa-float" href="#" data-wa-float aria-label="WhatsApp">
+      <img src="assets/icon-whatsapp.png" alt="" width="112" height="112" />
+    </a>
+    <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      document.querySelector("[data-year]").textContent = new Date().getFullYear();
+      (function () {
+        var cfg = window.CRUMORA_CONFIG || {};
+        var cc = String(cfg.whatsappCountryCode || "91").replace(/\D/g, "");
+        var num = String(cfg.whatsappNumber || "").replace(/\D/g, "");
+        var href = "https://wa.me/" + cc + num;
+        var f = document.querySelector("[data-wa-float-footer]");
+        if (f) f.setAttribute("href", href);
+        var cw = document.getElementById("contact-wa");
+        if (cw) cw.setAttribute("href", href);
+      })();
+    </script>
+  </body>
+</html>
